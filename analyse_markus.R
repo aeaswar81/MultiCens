@@ -15,4 +15,5 @@ hypo_unmelt<-dcast(hypo_crop,mouse_number~gene_short_name,value.var = "value",fu
 write.csv(hypo_unmelt,file="hypothal_mat.csv",row.names=FALSE)
 traits_insulin_strain=traits_insulin[,c('value','Strain')]
 traits_insulin_agg<-aggregate(value~Strain,data=traits_insulin_strain,mean)
-write.csv(traits_insulin_agg,"insulin_traits.csv")
+
+write.csv(traits_insulin_agg,"insulin_traits.csv",row.names = FALSE)
